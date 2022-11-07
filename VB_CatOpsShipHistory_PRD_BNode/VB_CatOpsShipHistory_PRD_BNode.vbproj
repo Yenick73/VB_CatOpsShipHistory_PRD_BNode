@@ -1,0 +1,335 @@
+﻿<Project ToolsVersion="17.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>VB_CatOpsShipHistory_PRD_BNode</RootNamespace>
+    <AssemblyName>VB_CatOpsShipHistory_PRD_BNode</AssemblyName>
+    <VSTO_HostDocumentName>VB_CatOpsShipHistory_PRD_BNode.xlsb</VSTO_HostDocumentName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <DefineConstants>VSTO40</DefineConstants>
+    <OfficeApplication>Excel</OfficeApplication>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
+    <ProjectGuid>{0CAFDB70-C6DE-444F-9B1B-5B22CCD7D6D4}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.VSTORuntime.4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Tools for Office Runtime %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VSTO_EmbedTypeLibraryInAssembly>false</VSTO_EmbedTypeLibraryInAssembly>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>$(DefineConstants)</DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VB_CatOpsShipHistory_PRD_BNode.xml</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VB_CatOpsShipHistory_PRD_BNode.xml</DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <!--
+    This section specifies references for the project.
+  -->
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.v4.0.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.Common.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+      <EmbedInteropTypes>true</EmbedInteropTypes>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Text" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="Microsoft.Office.Tools.Excel" />
+    <Import Include="Microsoft.VisualStudio.Tools.Applications.Runtime" />
+    <Import Include="Office = Microsoft.Office.Core" />
+    <Import Include="Excel = Microsoft.Office.Interop.Excel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Ribbon1.Designer.vb">
+      <DependentUpon>Ribbon1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ribbon1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="sht_FG_CPU.Designer.vb">
+      <DependentUpon>sht_FG_CPU.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_CPU.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_GFX.Designer.vb">
+      <DependentUpon>sht_FG_GFX.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_GFX.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_IST.Designer.vb">
+      <DependentUpon>sht_FG_IST.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_IST.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_MEM.Designer.vb">
+      <DependentUpon>sht_FG_MEM.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_MEM.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_OS.Designer.vb">
+      <DependentUpon>sht_FG_OS.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_OS.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_PNL.Designer.vb">
+      <DependentUpon>sht_FG_PNL.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_FG_PNL.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Filters.Designer.vb">
+      <DependentUpon>sht_Filters.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Filters.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Legend.Designer.vb">
+      <DependentUpon>sht_Legend.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Legend.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Platform.Designer.vb">
+      <DependentUpon>sht_Platform.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Platform.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Refresh.Designer.vb">
+      <DependentUpon>sht_Refresh.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Refresh.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Report.Designer.vb">
+      <DependentUpon>sht_Report.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="sht_Report.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <Compile Include="ThisWorkbook.Designer.vb">
+      <DependentUpon>ThisWorkbook.Designer.xml</DependentUpon>
+    </Compile>
+    <Compile Include="ThisWorkbook.vb">
+      <DependentUpon>VB_CatOpsShipHistory_PRD_BNode.xlsb</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Ribbon1.resx">
+      <DependentUpon>Ribbon1.vb</DependentUpon>
+    </EmbeddedResource>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VB_CatOpsShipHistory_PRD_BNode.xlsb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ThisWorkbook.Designer.xml">
+      <DependentUpon>ThisWorkbook.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_Filters.Designer.xml">
+      <DependentUpon>sht_Filters.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_Refresh.Designer.xml">
+      <DependentUpon>sht_Refresh.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_Platform.Designer.xml">
+      <DependentUpon>sht_Platform.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_Report.Designer.xml">
+      <DependentUpon>sht_Report.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_FG_CPU.Designer.xml">
+      <DependentUpon>sht_FG_CPU.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_FG_GFX.Designer.xml">
+      <DependentUpon>sht_FG_GFX.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_FG_PNL.Designer.xml">
+      <DependentUpon>sht_FG_PNL.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_FG_OS.Designer.xml">
+      <DependentUpon>sht_FG_OS.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_FG_IST.Designer.xml">
+      <DependentUpon>sht_FG_IST.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_FG_MEM.Designer.xml">
+      <DependentUpon>sht_FG_MEM.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sht_Legend.Designer.xml">
+      <DependentUpon>sht_Legend.vb</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
+        <ProjectProperties HostName="VB_CatOpsShipHistory_PRD_BNode.xlsb" HostPackage="{3F2B7691-D1D1-402F-9370-2704A737CF60}" OfficeVersion="15.0" VstxVersion="4.0" ApplicationType="XLS" Language="VB" TemplatesPath="VSTOTemplates" DebugInfoExeName="C:\Program Files\Microsoft Office\root\Office16\excel.exe" DebugInfoCommandLine="/t /x &quot;[$OUTPUT]VB_CatOpsShipHistory_PRD_BNode.xlsb&quot;" />
+        <Host Name="Excel Document" Path=".\VB_CatOpsShipHistory_PRD_BNode.xlsb">
+          <HostItem Name="sht_FG_CPU" Code="sht_FG_CPU.vb" CanonicalName="sht_FG_CPU" DisplayName="CPU" Blueprint="sht_FG_CPU.Designer.xml" GeneratedCode="sht_FG_CPU.Designer.vb" />
+          <HostItem Name="sht_FG_GFX" Code="sht_FG_GFX.vb" CanonicalName="sht_FG_GFX" DisplayName="GFX CARD" Blueprint="sht_FG_GFX.Designer.xml" GeneratedCode="sht_FG_GFX.Designer.vb" />
+          <HostItem Name="sht_FG_IST" Code="sht_FG_IST.vb" CanonicalName="sht_FG_IST" DisplayName="INT STORAGE" Blueprint="sht_FG_IST.Designer.xml" GeneratedCode="sht_FG_IST.Designer.vb" />
+          <HostItem Name="sht_FG_MEM" Code="sht_FG_MEM.vb" CanonicalName="sht_FG_MEM" DisplayName="MEMORY" Blueprint="sht_FG_MEM.Designer.xml" GeneratedCode="sht_FG_MEM.Designer.vb" />
+          <HostItem Name="sht_FG_OS" Code="sht_FG_OS.vb" CanonicalName="sht_FG_OS" DisplayName="OS" Blueprint="sht_FG_OS.Designer.xml" GeneratedCode="sht_FG_OS.Designer.vb" />
+          <HostItem Name="sht_FG_PNL" Code="sht_FG_PNL.vb" CanonicalName="sht_FG_PNL" DisplayName="PANEL" Blueprint="sht_FG_PNL.Designer.xml" GeneratedCode="sht_FG_PNL.Designer.vb" />
+          <HostItem Name="sht_Filters" Code="sht_Filters.vb" CanonicalName="sht_Filters" DisplayName="Filters" Blueprint="sht_Filters.Designer.xml" GeneratedCode="sht_Filters.Designer.vb" />
+          <HostItem Name="sht_Legend" Code="sht_Legend.vb" CanonicalName="sht_Legend" DisplayName="Legend" Blueprint="sht_Legend.Designer.xml" GeneratedCode="sht_Legend.Designer.vb" />
+          <HostItem Name="sht_Platform" Code="sht_Platform.vb" CanonicalName="sht_Platform" DisplayName="PLATFORM" Blueprint="sht_Platform.Designer.xml" GeneratedCode="sht_Platform.Designer.vb" />
+          <HostItem Name="sht_Refresh" Code="sht_Refresh.vb" CanonicalName="sht_Refresh" DisplayName="KFs Updates &amp; Refresh" Blueprint="sht_Refresh.Designer.xml" GeneratedCode="sht_Refresh.Designer.vb" />
+          <HostItem Name="sht_Report" Code="sht_Report.vb" CanonicalName="sht_Report" DisplayName="REPORT" Blueprint="sht_Report.Designer.xml" GeneratedCode="sht_Report.Designer.vb" />
+          <HostItem Name="ThisWorkbook" Code="ThisWorkbook.vb" CanonicalName="ThisWorkbook" Blueprint="ThisWorkbook.Designer.xml" GeneratedCode="ThisWorkbook.Designer.vb" />
+        </Host>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!--
+    To modify your build process, add your task inside one of the targets below and uncomment it.
+    Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
